@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>REST and Spring Boot</title>
+
+		<meta name="description" content="Brief overview of REST and introduction to Spring Boot">
+		<meta name="author" content="Debbie Roycroft">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+                <link rel="stylesheet" href="css/textcolours.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Introduction to REST and Spring Boot</h1>
+					<p>
+						<small>Debbie Roycroft 
+                                                <a href="http://twitter.com/DebbieRoycroft">@DebbieRoycroft</a></small></p>
+						<h4>Manchester Java Community</h3>
+                     <p>           <small><a href="http://twitter.com/mcrjava">@mcrjava</a></small> </p>
+                     <p>           <small><a href="http://www.meetup.com/ManchesterUK-Java-Community/"> meetup group</a></small> </p>
+					<p> <small><a href="https://www.linkedin.com/groups/Manchester-Java-Community-8270682/about">linkedin group</a></small></p>
+				</section>
+                            <section>
+                                <h1>REST and Spring Boot</h1>
+                                <p class="fragment roll-in">Overview of REST</p>
+                                <p class="fragment roll-in">Introduction to Spring Boot</p>
+								<p class="fragment roll-in">Demonstration</p>
+                            </section>
+							<section>
+								<h2>What is REST</h2>
+                                <ul>
+                                    <li class="fragment roll-in">Used for webservices</li>
+                                    <li class="fragment roll-in">Principle rather than protocol</li>
+                                    <li class="fragment roll-in">Stateless - does not rely on sessions</li>
+                                </ul>
+							</section>
+                            <section>
+                                <h2>Levels of REST</h2>
+                                <ul>
+                                    <li class="fragment roll-in">RPC</li>
+                                    <li class="fragment roll-in">Resources</li>
+                                    <li class="fragment roll-in">HTTP Verbs</li>
+                                    <li class="fragment roll-in">Hypermedia Controls</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h2>REST APIs - Resources</h2>
+                                <ul>
+                                    <li class="fragment roll-in">Object orientated</li>
+                                    <li class="fragment roll-in">Nouns rather than verbs</li>
+                                </ul>
+                            </section>
+							<section>
+                                <h2>REST APIs - Http Verbs</h2>
+                                <ul>
+                                    <li class="fragment roll-in">GET, POST, PUT, DELETE +</li>
+                                    <li class="fragment roll-in">Not quite the same as CRUD</li>
+									<li class="fragment roll-in">Know which methods are Safe vs Unsafe</li>
+									<li class="fragment roll-in">Know which methods are idempotent</li>
+                                </ul>
+                            </section>
+							<section>
+                                <h2>REST APIs - Hypermedia Controls</h2>
+                                <ul>
+                                    <li class="fragment roll-in">HATEOAS</li>
+                                    <li class="fragment roll-in">Links and relations in API</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h1>Spring Boot</h1>
+                                <ul>
+                                    <li class="fragment roll-in">Quick start for developing Spring Framework applications</li>
+									<li class="fragment roll-in">Pick parts of Spring Framework as needed</li>
+                                    <li class="fragment roll-in">Convention over configuration</li>
+                                    <li class="fragment roll-in">Customisable</li> 
+									<li class="fragment roll-in">Tooling in Eclipse Spring Tool Suite(STS)</li>									
+                                </ul>
+                            </section>
+                            <section>
+                                <h3>Tutorial</h3>
+                                <h4>Instructions</h4>
+								<p>http://debbieroycroft.github.io/rest-tutorial</p>
+								<h4>Code</h4>
+								<p>https://github.com/DebbieRoycroft/rest-tutorial/</p>
+                            </section>
+			</div>
+
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
